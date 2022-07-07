@@ -41,22 +41,24 @@ itemCampera.push(new Productocampera("Campera", "N3 Beats Studio", "negro", "M",
 let userName = prompt("Bienvenido! ingrese su Nombre");
 console.log(userName + " ingreso a la app");
 let selecUsuario = prompt("Hola " + userName + ". ¿Que producto vas a ingresar, buzo o campera?.");
-if (selecUsuario === "buzo") {
-    let idLogo = document.getElementById("titulo__logo");// h1 con id en index.html
-    idLogo.innerHTML = "Buzo ingresado";//texto de h1 reemplazado por js
+if (selecUsuario === "buzo"){
+    let testigoNuevo = document.getElementById("testigo")//"testigo es la ID de <P>"
+    testigoNuevo.innerHTML = "Nuevo buzo ingresado"
     let tipoNew = "Buzo";
     let marcaNew = prompt("ingrese la marca:");
     let colorNew = prompt("ingrese el color:");
     let talleNew = prompt("ingrese el talle: -XS-S-M-L-X-XL-XXL-:");
     let precioNew = prompt("ingrese el precio -sin el signo $-:");
     itemBuzo.push(new Productobuzo(tipoNew,marcaNew, colorNew, talleNew, precioNew));
-    console.log(userName + "ingreso un nuevo item");
+    console.log(userName + " ingreso un nuevo item");
     console.log(itemBuzo);
     
 }
 else if (selecUsuario === "campera") {
-    let idLogo = document.getElementById("titulo__logo")
-    idLogo.innerHTML = "Campera ingresada"
+    //testigo de ingreso.
+    let testigoNuevo = document.getElementById("testigo")//"testigo es la ID de <P>"
+    testigoNuevo.innerHTML = "Nueva Campera ingresada"
+
     let tipoNew = "Campera";
     let marcaNew = prompt("ingrese la marca:");
     let colorNew = prompt("ingrese el color:");
