@@ -1,3 +1,4 @@
+console.log(document.body);
 console.log("JavaScript-05. BrianSabatini - CoderHouse");
 
 class Productobuzo {
@@ -41,6 +42,8 @@ let userName = prompt("Bienvenido! ingrese su Nombre");
 console.log(userName + " ingreso a la app");
 let selecUsuario = prompt("Hola " + userName + ". ¿Que producto vas a ingresar, buzo o campera?.");
 if (selecUsuario === "buzo") {
+    let idLogo = document.getElementById("titulo__logo");// h1 con id en index.html
+    idLogo.innerHTML = "Buzo ingresado";//texto de h1 reemplazado por js
     let tipoNew = "Buzo";
     let marcaNew = prompt("ingrese la marca:");
     let colorNew = prompt("ingrese el color:");
@@ -49,8 +52,11 @@ if (selecUsuario === "buzo") {
     itemBuzo.push(new Productobuzo(tipoNew,marcaNew, colorNew, talleNew, precioNew));
     console.log(userName + "ingreso un nuevo item");
     console.log(itemBuzo);
+    
 }
 else if (selecUsuario === "campera") {
+    let idLogo = document.getElementById("titulo__logo")
+    idLogo.innerHTML = "Campera ingresada"
     let tipoNew = "Campera";
     let marcaNew = prompt("ingrese la marca:");
     let colorNew = prompt("ingrese el color:");
@@ -69,6 +75,5 @@ for (let i = 1; i < 99; i++) {
     break;
 }
 
-console.log("stock total");
-console.log(itemBuzo)
-console.log(itemCampera)
+console.log("stock total final");
+console.log(itemBuzo.concat(itemCampera))
